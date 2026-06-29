@@ -779,5 +779,6 @@ def api_canli_piyasa_yenile():
     
 
 if __name__ == '__main__':
-    # HZM Hot-Reload Canlı İzleme Aktifleşti
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    # HZM BTS: Render ortamı veya yerel port yönetimi
+    port = int(os.environ.get("PORT", 5000))
+    app.run(debug=False, host='0.0.0.0', port=port)
